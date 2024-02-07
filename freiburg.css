@@ -1,0 +1,120 @@
+/*
+CSS for xaringan slides in UF flavor
+Author: Raphael Hartmann
+*/
+
+/* Package defaults that we slightly tweak */
+
+a, a > code {
+  color: rgb(249, 38, 114);
+  text-decoration: none;
+}
+
+/* slightly lower and smaller than default */
+.footnote {
+  position: absolute;
+  bottom: 1em;
+  padding-right: 4em;
+  font-size: 80%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+
+/* color tweak */
+.inverse {
+  background-color: #A4B1E0;
+  color: #000000;
+  text-shadow: 0 0 20px #333;
+  background-image: url(https://raw.githubusercontent.com/RaphaelHartmann/uf_xaringan/main/UFR-seal_FFFFFF.png);
+  background-size: 30em;
+  background-position: bottom right;
+  class: exclude
+}
+
+/* color tweak */
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #FFFFFF;
+  class: left
+}
+
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+.pull-right + * {
+  clear: both;
+}
+img, video, iframe {
+  max-width: 100%;
+}
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+.remark-slide table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+.remark-slide table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+.remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) { background: #eee }
+
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+
+/*~~~~~~~~~~~~~~*/
+/* UF additions */
+/*~~~~~~~~~~~~~~*/
+
+/* Title slide */
+.title-slide {
+  background-image: url(https://raw.githubusercontent.com/RaphaelHartmann/uf_xaringan/main/UFR-logo_FFFFFF.png),
+                    url(https://raw.githubusercontent.com/RaphaelHartmann/uf_xaringan/main/UFR-seal_A4B1E0.png);
+  background-position: 7.35% 8%, bottom right;
+  background-size: 15em, 30em;
+}
+
+/* logo on every slide */
+.remark-slide-content:not(.exclude){
+  background-image: url(https://raw.githubusercontent.com/RaphaelHartmann/uf_xaringan/main/UFR-logo_344A9A.png);
+  background-position: 9.95% 98%;
+  background-size: auto 1em;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+.body {
+  font-family: arial, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui;
+}
