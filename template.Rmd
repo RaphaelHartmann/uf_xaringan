@@ -13,22 +13,37 @@ output:
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: false
-      titleSlideClass: [bottom, left]
+      titleSlideClass: [bottom, left, exclude]
+
 
 ---
+
 
 <style type="text/css">
 .title-slide h1 {
   font-family: var(--code-font-family)
+  font-style: sans serif
 }
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--header-color);
   class: left
 }
 .inverse {
-  background-image: url("./forceplate_files/img/siegel_FFFFFF.png");
+  background-image: url("./siegel_FFFFFF.png");
   background-size: 30em;
   background-position: bottom right;
+}
+.title-slide {
+  background-image: url("./UFR-logo_FFFFFF.png"), 
+                    url("./siegel_A4B1E0.png");
+  background-position: 7.35% 8%, bottom right; 
+  background-size: 15em, 30em; 
+}
+.remark-slide-content:not(.exclude){
+  background-image: url(./UFR-logo_344A9A.png);
+  background-position: 9.95% 98%;
+  background-size: auto 1em;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
 }
 </style>
 
@@ -52,21 +67,13 @@ style_duo_accent(
   primary_color = "#344A9A",
   secondary_color = "#A4B1E0",
   inverse_header_color = "#FFFFFF", 
-  title_slide_background_image = "./forceplate_files/img/siegel.png", 
-  title_slide_background_position = c("bottom right"), 
-  title_slide_background_size = "30em", 
+  # title_slide_background_image = "./siegel_A4B1E0.png", 
+  # title_slide_background_position = c("bottom right"), 
+  # title_slide_background_size = "30em", 
   text_font_family = "Arial",
 )
 ```
 
-
-## Some Image
-
-<center><img src="https://raw.githubusercontent.com/RaphaelHartmann/forceplate/da5b7f07c72dc940fe322dc8f725501889a99aff/man/figures/forceplate_logo.svg" height="400px" /></center>
-
-.footnote[GitHub RaphaelHartmann/forceplate]
-
----
 
 
 ## Typography
@@ -77,8 +84,7 @@ Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
 
 ### Lorem Ipsum
 
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
+Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. Lacinia neque mollis nascetur neque urna velit bibendum. 
 Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 
 - Dolor cubilia nostra nunc sodales
@@ -87,7 +93,10 @@ Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 
 - Ipsum dis nec porttitor urna sed
 
+
 ---
+
+
 name: colors
 
 ## Colors
@@ -117,7 +126,9 @@ Enim sit amet
 venenatis urna cursus eget nunc scelerisque viverra.
 ]
 
+
 ---
+
 
 # Big Topic or Inverse Slides `#`
 
@@ -133,7 +144,9 @@ This is a normal paragraph text. Only use header levels 1-4.
 
 ###### Definitely don't use h6 `######`
 
+
 ---
+
 
 # Left-Column Headings
 
@@ -153,8 +166,11 @@ Amet egestas neque tempor fermentum proin massa!
 Dolor elementum fermentum pharetra lectus arcu pulvinar.
 ]
 
+
 ---
-class: inverse left middle
+
+
+class: inverse left middle exclude
 
 # Topic Changing Interstitial
 
@@ -164,12 +180,17 @@ class: inverse left middle
 class: inverse center middle
 ```
 
+
 ---
+
+
 layout: true
 
 ## Blocks
 
+
 ---
+
 
 ### Blockquote
 
@@ -177,7 +198,9 @@ layout: true
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
+
 ---
+
 
 ### Code Blocks
 
@@ -199,7 +222,9 @@ var fun = function lang(l) {
 }
 ```
 
+
 ---
+
 
 ### More R Code
 
@@ -207,7 +232,9 @@ var fun = function lang(l) {
 dplyr::starwars %>% dplyr::slice_sample(n = 4)
 ```
 
+
 ---
+
 
 ```{r message=TRUE, eval=requireNamespace("cli", quietly = TRUE)}
 cli::cli_alert_success("It worked!")
@@ -233,36 +260,51 @@ stop("I hope you're sitting down for this")
 
 
 ---
+
+
 layout: true
 
 ## Tables
 
+
 ---
+
+
 exclude: `r if (requireNamespace("tibble", quietly=TRUE)) "false" else "true"`
 
 ```{r eval=requireNamespace("tibble", quietly=TRUE)}
 tibble::as_tibble(mtcars)
 ```
 
+
 ---
+
 
 ```{r}
 knitr::kable(head(mtcars), format = 'html')
 ```
 
+
 ---
+
+
 exclude: `r if (requireNamespace("DT", quietly=TRUE)) "false" else "true"`
 
 ```{r eval=requireNamespace("DT", quietly=TRUE)}
 DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
 ```
 
+
 ---
+
+
 layout: true
 
 ## Lists
 
+
 ---
+
 
 .pull-left[
 #### Here is an unordered list:
@@ -283,7 +325,9 @@ layout: true
 1.  Item four
 ]
 
+
 ---
+
 
 ### And a nested list:
 
@@ -301,7 +345,9 @@ layout: true
   - level 2 item
 - level 1 item
 
+
 ---
+
 
 ### Nesting an ol in ul in an ol
 
@@ -321,19 +367,26 @@ layout: true
     - level 3 item (ul)
 - level 1 item (ul)
 
+
 ---
+
+
 layout: true
 
 ## Plots
 
+
 ---
+
 
 ```{r plot-example, eval=requireNamespace("ggplot2", quietly=TRUE)}
 library(ggplot2)
 (g <- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
 ```
 
+
 ---
+
 
 ```{r plot-example-themed, eval=requireNamespace("showtext", quietly=TRUE) && requireNamespace("ggplot2", quietly=TRUE)}
 g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
@@ -343,6 +396,21 @@ g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
 .footnote[Requires `{showtext}`]
 
 
+---
+
+
+layout: false
+
+
+## Square Image
+
+<center><img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /></center>
+
+.footnote[GitHub Octocat]
+
+
+---
+
 
 ### Wide image
 
@@ -350,7 +418,9 @@ g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
 
 .footnote[Wide images scale to 100% slide width]
 
+
 ---
+
 
 ## Two images
 
@@ -362,7 +432,9 @@ g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
 ![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
 ]
 
+
 ---
+
 
 ### Definition lists can be used with HTML syntax.
 
@@ -377,7 +449,10 @@ g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
 <dd>Green</dd>
 </dl>
 
+
 ---
+
+
 class: center, middle
 
 # Thanks!
@@ -388,3 +463,5 @@ Slides created via the R packages:
 [gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+Adapted by: [Raphael Hartmann](https://github.com/RaphaelHartmann/uf_xaringan)
