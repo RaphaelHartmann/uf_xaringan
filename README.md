@@ -2,7 +2,7 @@
 
 This is a xaringan template for the University of Freiburg.
 
-## Installation
+## Instruction
 1. download the project
 2. rename "template.Rmd" to your liking
 3. open the Rmd file in RStudio
