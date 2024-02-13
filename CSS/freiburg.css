@@ -5,7 +5,7 @@ body h1, body h2, body h3 {
   color: #344A9A;
 }
 
-.my-title-slide {
+.title-slide {
   background-color: #344A9A;
   background-image: url(../IMGs/siegel_A4B1E0.png),
                     url(../IMGs/20221107-UFR-logo-white-rgb-FFFFFF.png);
@@ -16,7 +16,7 @@ body h1, body h2, body h3 {
   color: #FFFFFF;
 }
 
-.my-title-slide h1, .my-title-slide h2, .my-title-slide h3 {
+.title-slide h1, .title-slide h2, .title-slide h3 {
   color: #FFFFFF;
 }
 
