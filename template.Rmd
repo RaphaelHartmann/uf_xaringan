@@ -12,7 +12,7 @@ output:
     css: ["default", "CSS/freiburg.css", "CSS/freiburg-fonts.css"]
     lib_dir: libs
     nature:
-      titleSlideClass: ["my-title-slide", "exclude"]
+      titleSlideClass: ["title-slide"]
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
