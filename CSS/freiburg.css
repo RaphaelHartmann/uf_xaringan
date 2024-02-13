@@ -11,8 +11,8 @@ body h1, body h2, body h3 {
                     url(../IMGs/20221107-UFR-logo-white-rgb-FFFFFF.png);
   background-size: 30em, 15em;
   background-position: bottom right, 4.6% 8%;
-  vertical-align: bottom !important;
-  text-align: left !important;
+  vertical-align: bottom;
+  text-align: left;
   color: #FFFFFF;
 }
 
@@ -27,7 +27,8 @@ body h1, body h2, body h3 {
   background-position: bottom right;
   color: #000000;
   text-shadow: 0 0 0px #333;
-  text-align: left !important;
+  vertical-align: middle;
+  text-align: left;
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
