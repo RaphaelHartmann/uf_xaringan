@@ -20,6 +20,26 @@ body h1, body h2, body h3 {
   color: #FFFFFF;
 }
 
+.title-slide h2 {
+  font-size: 38px;
+}
+
+.title-slide h3 {
+  font-size: 24px;
+}
+
+.author h3 {
+  line-height: 0.5;
+}
+
+.institute h3 {
+  line-height: 0.5;
+}
+
+.date h3 {
+  line-height: 0.5;
+}
+
 .inverse {
   background-color: #A4B1E0;
   background-image: url(../IMGs/siegel_FFFFFF.png);
