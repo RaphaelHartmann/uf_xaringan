@@ -44,6 +44,14 @@ class: inverse, center, middle
 # Get Started
 
 ---
+class: overview
+## Overview
+1st point
+
+2nd point
+
+3rd point
+---
 
 ## Hello World
 
