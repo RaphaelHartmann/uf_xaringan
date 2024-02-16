@@ -28,16 +28,14 @@ body h1, body h2, body h3 {
   font-size: 24px;
 }
 
-.author h3 {
+.author h3, .institute h3 {
   line-height: 1;
-}
-
-.institute h3 {
-  line-height: 1;
+  margin-bottom: -15px;
 }
 
 .date h3 {
   line-height: 1;
+  margin-bottom: 30px;
 }
 
 .inverse {
