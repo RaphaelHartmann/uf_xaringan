@@ -2,7 +2,7 @@
 ---
 title: "Title"
 subtitle: "Subtitle"
-author: "Yihui Xie and adapted by Raphael Hartmann for"
+author: "Yihui Xie and <br>adapted by Raphael Hartmann for"
 institute: "University of Freiburg"
 date: "Location, `r Sys.Date()`"
 output:
