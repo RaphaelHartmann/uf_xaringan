@@ -73,3 +73,20 @@ blockquote {
   padding: .5em;
   color: #808080;
 }
+
+.overview::before, .overview::after {
+  content: "";
+  position: absolute;
+  left: 61px;
+  right: 38px;
+  height: 2px; /* Height of the line, representing its thickness */
+  background-color: #344A9A; /* Change the color as needed */
+}
+
+.overview::before {
+  top: 17%; /* Position of the first line */
+}
+
+.overview::after {
+  top: 90%; /* Position of the second line */
+}
