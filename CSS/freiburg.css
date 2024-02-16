@@ -20,8 +20,13 @@ body h1, body h2, body h3 {
   color: #FFFFFF;
 }
 
+.title-slide h1 {
+  margin-bottom: -20px;
+}
+
 .title-slide h2 {
   font-size: 38px;
+  margin-bottom: 80px;
 }
 
 .title-slide h3 {
@@ -35,7 +40,7 @@ body h1, body h2, body h3 {
 
 .date h3 {
   line-height: 1;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .inverse {
